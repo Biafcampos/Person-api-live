@@ -1,4 +1,4 @@
-package com.illusendtech.personapi;
+package com.illusendtech.personapi.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
