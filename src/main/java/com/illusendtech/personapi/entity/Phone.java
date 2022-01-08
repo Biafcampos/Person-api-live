@@ -5,7 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import  com.illusendtech.personapi.enums.PhoneType;
+import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.*;
 
 @Entity

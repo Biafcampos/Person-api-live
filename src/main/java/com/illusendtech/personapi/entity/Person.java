@@ -1,11 +1,13 @@
 package com.illusendtech.personapi.entity;
 
-
+import com.illusendtech.personapi.enums.PhoneType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import javax.persistence.Id;
+import java.util.List;
+//import java.time.LocalDate;
 import javax.persistence.*;
 
 @Entity
@@ -16,7 +18,7 @@ import javax.persistence.*;
 public class Person {
 
     @Id
-    @Ge  neratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
 
     @Column(nullable = false)
@@ -28,12 +30,11 @@ public class Person {
     @Column(nullable = false, unique = true)
     private String cpf;
 
+  //  private LocalDate birthDate;
 
-    private localDate birthDate;
 
-
-    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-    private list<Phone> phones;
+   @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    private List<Phone> phones;
 
 
 }
