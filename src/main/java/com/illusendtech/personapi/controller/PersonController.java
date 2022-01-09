@@ -28,7 +28,7 @@ public class PersonController {
         Person savedPerson = personRepository.save(person);
         return MessageResponseDTO
                 .builder()
-                .message("Create person with ID" + savedPerson.getId())
+                .message("Create person with ID " + savedPerson.getId())
                 .build();
     }
 }
