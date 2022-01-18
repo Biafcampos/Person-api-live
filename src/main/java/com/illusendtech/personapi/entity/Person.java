@@ -10,6 +10,7 @@ import java.util.List;
 import java.time.LocalDate;
 import javax.persistence.*;
 
+
 @Entity
 @Data
 @Builder
@@ -19,7 +20,8 @@ public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  long id;
+    @Column(nullable = false)
+    private Long id;
 
     @Column(nullable = false)
     private String firstName;
